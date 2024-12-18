@@ -14,13 +14,7 @@ import logging
 from mpi4py import MPI
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description="PsanaWrapper Data Producer")
-    ## parser.add_argument("--exp", type=str, required=True, help="Experiment name")
-    ## parser.add_argument("--run", type=int, required=True, help="Run number")
-    ## parser.add_argument("--detector_name", type=str, required=True, help="Detector name")
-    ## parser.add_argument("--calib", type=bool, default=True, help="Use calib mode")
-    ## parser.add_argument("--uses_bad_pixel_mask", type=bool, default=True, help="Use bad pixel mask")
-    ## parser.add_argument("--manual_mask_path", type=str, default=None, help="Path to a manual mask in npy")
+    parser = argparse.ArgumentParser(description="Dummy Data Producer")
     parser.add_argument("--ray_address", type=str, default="auto", help="Address of the Ray cluster")
     parser.add_argument("--ray_namespace", type=str, default="default", help="Ray namespace to use for both queues")
     parser.add_argument("--queue_name", type=str, default='my', help="Queue name")
