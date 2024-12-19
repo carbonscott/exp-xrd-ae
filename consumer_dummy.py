@@ -41,8 +41,6 @@ dataloader = DataLoader(
 
 batch_idx = 0
 for batch in dataloader:
-    if batch is None:
-        logger.info("None received...")
     rank, id, data = batch
     logger.info(f"Processing batch {batch_idx} of shape: {data.shape}")
     batch_idx += 1

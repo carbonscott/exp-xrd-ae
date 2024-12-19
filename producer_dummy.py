@@ -72,7 +72,7 @@ def produce_data(queue, rank, size, num_consumers=1, max_steps=None):
     comm = MPI.COMM_WORLD
 
     TOTAL_ITERATIONS = int(1e5)
-    B, C, H, W = 1, 1, 1920, 1920
+    C, H, W = 1, 1920, 1920
 
     # Delay for exponential backoff
     base_delay_in_sec = 0.1
@@ -84,7 +84,7 @@ def produce_data(queue, rank, size, num_consumers=1, max_steps=None):
             break
 
         # Generate data
-        data = torch.randn(B, C, H, W)  # Simulate a Rayonix image
+        data = torch.randn(C, H, W)  # Simulate a Rayonix image
 
         retries = 0
         while True:
